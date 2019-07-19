@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: wrokFlow
+
+     
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.16.6.132:3306/ua_portal?useUnicode=true&characterEncoding=utf-8&connectTimeout=3000&socketTimeout=60000&useSSL=false
+    username: dev 
+    password: dev
+   #每次应用启动不检查Activiti数据表是否存在及版本号是否匹配，提升应用启动速度
+  activiti.database-schema-update: true
+  #保存历史数据级别设置为full最高级别，便于历史数据的追溯
+  activiti.history-level: full
+   
+server:
+  port: 8081    
+    
